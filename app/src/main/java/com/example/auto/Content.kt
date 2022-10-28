@@ -12,7 +12,7 @@ fun Content() {
     val navController = rememberNavController()
 
     NavHost(navController = navController, startDestination = "list") {
-        composable(Screen.List.route) { ListWork() }
+        composable(Screen.List.route) { ListWork(navController) }
         composable(Screen.Edit().route+"/{Id}") { EditWork(navArgument("Id") {
             defaultValue = null
         })}
